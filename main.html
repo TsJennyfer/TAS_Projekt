@@ -2,81 +2,8 @@
 <html>
     <head>
         <meta charset="utf-8">
-            <title>BOOKshelf
-            </title>
-            <style>
-                .b1 {
-                    background: red;
-                    color: black;
-                    font-size: 15pt;
-                    border: none;
-                    display: inline-block;
-                    padding: 15px 32px;
-                    width: 200px;
-                    cursor: pointer;
-                }
-                .b1:hover {background-color: #cc0000}
-                .b1:active {
-                    background-color: #cc0000;
-                    transform: translateY(4px);
-                }
-            
-                .b2 {
-                    background: #e6e6e6	;
-                    color: black;
-                    font-size: 20pt;
-                    text-align: center;
-                    border: none;
-                    display: block;
-                    padding: 30px 62px;
-                    width: 410px;
-                    transition: all 0.5s;
-                    cursor: pointer;
-                    margin: 5px;
-                    border-radius: 4px;
-                }
-                .b2 span {
-                    cursor: pointer;
-                    display: inline-block;
-                    position: relative;
-                    transition: 0.5s;
-                }
-                .b2 span:after {
-                    content: '\00bb';
-                    position: absolute;
-                    opacity: 0;
-                    top: 0;
-                    right: -20px;
-                    transition: 0.5s;
-                }
-                .b2:hover span { padding-right: 25px; }
-                .b2:hover span:after {
-                    opacity: 1;
-                    right: 0;
-                }
-            
-                .p1 {
-                    font-family: "Comic Sans MS", cursive, sans-serif;
-                    text-align: center;
-                }
-            
-                .b3 {
-                    background: red;
-                    color: black;
-                    font-size: 15pt;
-                    border: none;
-                    display: inline-block;
-                    padding: 5px 32px;
-                    width: 200px;
-                    cursor: pointer;
-                }
-                .b3:hover {background-color: #cc0000}
-                .b3:active {
-                    background-color: #cc0000;
-                    transform: translateY(4px);
-                }
-            </style>
-            
+        <title>BOOKshelf</title>
+		<link rel="stylesheet" href="style.css">
     </head>
     
     <body>
@@ -86,7 +13,9 @@
         <table>
             <tr>
                 <td>
-                    <p style="text-align: center"> <font size=100 color= #ff0000>BOOKshelf</font></p>
+					<form>
+						<button class="bMainPage" > BOOKshelf </font></p>
+					</form>
                 </td>
                 
                 <td align="right">
@@ -109,56 +38,63 @@
                 </td>
                 <td>
                     <form>
-                        <button class="b3" > Szukaj </button>
+                        <button class="bSearch" > Szukaj </button>
                     </form>
                 </td>
             </tr>
             <tr>
                 <td>
                     <form>
-                        <button class="b2" style="vertical-align:middle"><span> Promocje </span></button>
+                        <button class="bMenu" style="vertical-align:middle"><span> Promocje </span></button>
                     </form>
                 </td>
             </tr>
             <tr>
                 <td>
                     <form>
-                        <button class="b2" style="vertical-align:middle"><span> Bestsellery </span></button>
+                        <button class="bMenu" style="vertical-align:middle"><span> Bestsellery </span></button>
                     </form>
                 </td>
             </tr>
             <tr>
                 <td>
                     <form>
-                        <button class="b2" style="vertical-align:middle"> <span>Książki dla młodzieży </span></button>
+                        <button class="bMenu" style="vertical-align:middle"> <span>Fantastyka </span></button>
                     </form>
                 </td>
             </tr>
             <tr>
                 <td>
                     <form>
-                        <button class="b2" style="vertical-align:middle"> <span>Książki dla dzieci </span></button>
+                        <button class="bMenu" style="vertical-align:middle"> <span>Horror </span></button>
                     </form>
                 </td>
             </tr>
             <tr>
                 <td>
                     <form>
-                        <button class="b2" style="vertical-align:middle"> <span>Audiobooki </span></button>
+                        <button class="bMenu" style="vertical-align:middle"> <span>Historia </span></button>
                     </form>
                 </td>
             </tr>
             <tr>
                 <td>
                     <form>
-                        <button class="b2" style="vertical-align:middle"> <span>Podręczniki </span></button>
+                        <button class="bMenu" style="vertical-align:middle"> <span>Biografie </span></button>
                     </form>
                 </td>
             </tr>
             <tr>
                 <td>
                     <form>
-                        <button class="b2" style="vertical-align:middle"> <span>Poradniki </span></button>
+                        <button class="bMenu" style="vertical-align:middle"> <span>E-booki </span></button>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <form>
+                        <button class="bMenu" style="vertical-align:middle"> <span>Podręczniki i słowniki </span></button>
                     </form>
                 </td>
             </tr>
@@ -176,6 +112,11 @@
                         <button name="button" id="button" onclick="readServer()"> server </button>
                 </td>
             </tr>
+
+ 					<form>
+                        <button class="bBasket"> Do koszyka <img src="./sta/12.jpg" 
+         style="vertical-align: middle"></button>
+                    </form>
         </table>
     </body>
     
