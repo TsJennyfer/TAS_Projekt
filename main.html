@@ -50,14 +50,12 @@
         </div>
         
 	<table>
-        
-        
       		<tr>
 			<td width="35%">
 				<button class="bMainPage" > BOOKshelf </font>
 			<td>
 			<td width="65%">
-                <button class="b1" onclick="location='new.php'" > Logowanie </button>
+                <button class="b1" onclick="document.getElementById('id01').style.display='block'""><!--onclick="location='new.php'"-->  Logowanie </button>
                 <button class="b1" onclick="location='rejestracja.php'"> Stwórz konto </button>
 			</td>
 		</tr>  
@@ -72,7 +70,40 @@
  		</tr>
 	</table>
     
-  
+    <div id="id01" class="modal">
+        
+        <form class="modal-content animate" action="/action_page.php">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="resorses/man.jpg" alt="Avatar" class="avatar" >
+                    </div>
+            
+            <div class="container">
+                <label><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+                    
+                    <label><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                        
+                        <button type="submit">Login</button>
+                        <input type="checkbox" checked="checked"> Remember me
+                            </div>
+            
+                <center><button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button></center>
+        </form>
+    </div>
+    
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
     
 <!--<center>
 <img src="http://www.ps1.wieliszew.pl/images/galeria2016/og%C3%B3lne/SOWA.png">
