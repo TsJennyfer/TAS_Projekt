@@ -6,16 +6,22 @@
 
 html, body {
     height: 100%;
+    width: auto;
+
 }
 
 html {
     display: table;
     margin: auto;
+    width: auto;
+
 }
 
 body {
     display: table-cell;
     vertical-align: middle;
+    width: auto;
+
 }
 
 .p1 {
@@ -27,7 +33,7 @@ body {
     background: red;
     color: black;
     font-size: 15pt;
-    border: none;
+    border: 10px;
     display: inline-block;
     padding: 15px 32px;
     width: 200px;
@@ -83,6 +89,7 @@ body {
     width: 200px;
     cursor: pointer;
 }
+
 .bSearch:hover {background-color: #cc0000}
 .bSearch:active {
     background-color: #cc0000;
@@ -130,7 +137,6 @@ img {
     
 }
 
-
 input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
@@ -170,7 +176,8 @@ button:hover {
 }
 
 .container {
-    padding: 16px;
+    padding: 30px;
+    width: 100%;
 }
 
 span.psw {

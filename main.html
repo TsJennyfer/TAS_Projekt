@@ -13,6 +13,34 @@
     
     <body>
         <script src="myapp.js"></script>
+        <div class="container" style="background-color:#f1f1f1"> </div>
+        <table>
+            <tr>
+                <td width="35%">
+                    <button class="bMainPage" > BOOKshelf </font>
+                <td>
+                <td width="65%">
+                    <p>
+                        <button class="b1" onclick="document.getElementById('id01').style.display='block'"">
+                         <!--onclick="location='new.php'"-->
+                         Logowanie </button>
+                    </p>
+                    <p>
+                        <button class="b1" onclick="location='rejestracja.php'"> Stwórz konto </button>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="35%">
+                    <p class="p1" > Twoja księgarnia internetowa </p>
+                </td>
+                <td width="75%">
+                    <input type="text" name="textbox" id="textbox" size = 35 />
+                    <button class="bSearch" > Szukaj </button>
+                </td>
+            </tr>
+        </table>
+                                    
         
         <div class="container">
             
@@ -21,7 +49,6 @@
                 <ol class="carousel-indicators">
                     <li class="item1 active"></li>
                     <li class="item2"></li>
-                    <li class="item3"></li>
                 </ol>
                 
                 <!-- Wrapper for slides -->
@@ -49,27 +76,7 @@
             </div>
         </div>
         
-	<table>
-      		<tr>
-			<td width="35%">
-				<button class="bMainPage" > BOOKshelf </font>
-			<td>
-			<td width="65%">
-                <button class="b1" onclick="document.getElementById('id01').style.display='block'""><!--onclick="location='new.php'"-->  Logowanie </button>
-                <button class="b1" onclick="location='rejestracja.php'"> Stwórz konto </button>
-			</td>
-		</tr>  
-		<tr>    
-                	<td width="35%">
-				<p class="p1" > Twoja księgarnia internetowa </p>
-			</td>
-              		<td width="75%">
-				<input type="text" name="textbox" id="textbox" size = 40 border = "20"/>
-                		<button class="bSearch" > Szukaj </button>
-			</td>
- 		</tr>
-	</table>
-    
+
     <div id="id01" class="modal">
         
         <form class="modal-content animate" action="/action_page.php">
@@ -187,35 +194,8 @@
         </table>
         
           <div id="app">good</div>
-
-<script>
-    $(document).ready(function(){
-                      // Activate Carousel
-                      $("#myCarousel").carousel();
-                      
-                      // Enable Carousel Indicators
-                      $(".item1").click(function(){
-                                        $("#myCarousel").carousel(0);
-                                        });
-                      $(".item2").click(function(){
-                                        $("#myCarousel").carousel(1);
-                                        });
-                      $(".item3").click(function(){
-                                        $("#myCarousel").carousel(2);
-                                        });
-                      $(".item4").click(function(){
-                                        $("#myCarousel").carousel(3);
-                                        });
-                      
-                      // Enable Carousel Controls
-                      $(".left").click(function(){
-                                       $("#myCarousel").carousel("prev");
-                                       });
-                      $(".right").click(function(){
-                                        $("#myCarousel").carousel("next");
-                                        });
-                      });
-    </script>
+          
+          <div class="container" style="background-color:#f1f1f1"> </div>
     </body>
     
 </html>
