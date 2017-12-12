@@ -1,32 +1,31 @@
-
 * {
-    margin: 0;
-    padding: 0;
+    margin: 5px;
+    padding: 5px;
 }
 
 html, body {
     height: 100%;
-    width: auto;
-
-}
-
-html {
+    width: 100%;
     display: table;
-    margin: auto;
-    width: auto;
-
 }
 
 body {
     display: table-cell;
     vertical-align: middle;
-    width: auto;
+}
 
+
+.bg { 
+    background-image: url("resorses/back.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .p1 {
     font-family: "Comic Sans MS", cursive, sans-serif;
-    text-align: center;
+    text-align: left;
 }
 
 .b1 {
@@ -85,11 +84,9 @@ body {
     font-size: 15pt;
     border: none;
     display: inline-block;
-    padding: 5px 32px;
-    width: 200px;
+    width: 150px;
     cursor: pointer;
 }
-
 .bSearch:hover {background-color: #cc0000}
 .bSearch:active {
     background-color: #cc0000;
@@ -97,7 +94,7 @@ body {
 }
 
 .bMainPage{
-	background-color: white;
+	background-color: #E0E0E0;
 	color: red;
 	font-size: 40pt;
 	border: none;
@@ -117,7 +114,7 @@ body {
     padding: 15px 32px;
     width: 200px;
     cursor: pointer;
-	image: './sta/12.jpg' ;
+        image: './sta/12.jpg' ;
     vertical-align: middle ;
 }
 .bBasket:hover {background-color: #cc0000}
@@ -132,13 +129,13 @@ img {
 
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-    width: 70%;
+    width: auto;
     margin: auto;
     
 }
 
 input[type=text], input[type=password] {
-    width: 100%;
+    width: 50%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -154,7 +151,7 @@ button {
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 70%;
 }
 
 button:hover {
@@ -178,6 +175,17 @@ button:hover {
 .container {
     padding: 30px;
     width: 100%;
+    height: auto;
+    
+    margin: 5px;
+}
+
+.container_for_list{
+        width: 690px;
+        height: 1000px;
+        
+    margin: 5px;
+    padding: 5px;
 }
 
 span.psw {
@@ -205,7 +213,7 @@ span.psw {
     background-color: #fefefe;
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 90%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button (x) */

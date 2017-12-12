@@ -57,8 +57,7 @@ function reanderMyData(data)
         {
                 console.log(myData);
                 for(var x in myData){
-                        console.log(x); 
-                        
+                        console.log(x);
                 }
                 html = "<button>aaa</button>";  //make html 
                 document.getElementById("app").innerHTML = html;
