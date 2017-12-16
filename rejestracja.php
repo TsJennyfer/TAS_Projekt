@@ -137,7 +137,7 @@ if(isset($_POST['email']))
                                                         <br>      
                                                         sklep@bookshelf.pl   
                                                         <br>
-                                                        <a href="url">KONTAKT</a>
+                                                        <a href="kontakt.html">KONTAKT</a>
                                                 </font>
                                         </p>
                                 </td>

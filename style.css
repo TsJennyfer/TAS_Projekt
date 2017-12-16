@@ -17,10 +17,8 @@ body {
 
 .bg { 
     background-image: url("resorses/back.jpg");
-    height: 100%; 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .p1 {
@@ -84,7 +82,7 @@ body {
     font-size: 15pt;
     border: none;
     display: inline-block;
-    width: 150px;
+    width: 140px;
     cursor: pointer;
 }
 .bSearch:hover {background-color: #cc0000}
