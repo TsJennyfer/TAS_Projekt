@@ -50,7 +50,7 @@ body {
     border: none;
     display: block;
     padding: 30px 62px;
-    width: 410px;
+    width: 350px;
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
@@ -92,15 +92,23 @@ body {
 }
 
 .bMainPage{
-	background-color: #E0E0E0;
-	color: red;
-	font-size: 40pt;
-	border: none;
-    display: inline-block;
-    padding: 25px 32px;
-    width: 380px;
-	height: 120px;
-    cursor: pointer;
+        background-color: #E0E0E0;
+        color: red;
+        font-size: 40pt;
+        border: none;
+        display: inline-block;
+        padding: 25px 32px;
+        width: 380px;
+        height: 120px;
+        cursor: pointer;
+}  
+
+.book{
+        border: none;
+        display: inline-block;
+        padding: 25px 32px;
+        cursor: pointer;
+        background-color:#f1f1f1;
 }  
 
 .bBasket {
@@ -142,7 +150,7 @@ input[type=text], input[type=password] {
 }
 
 /* Set a style for all buttons */
-button {
+.buttonLogin {
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
@@ -152,7 +160,7 @@ button {
     width: 70%;
 }
 
-button:hover {
+.buttonLogin:hover {
     opacity: 0.8;
 }
 
@@ -174,14 +182,22 @@ button:hover {
     padding: 30px;
     width: 100%;
     height: auto;
-    
     margin: 5px;
 }
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+
+}
+
 .container_for_list{
-        width: 690px;
-        height: 1000px;
-        
+    width: 760px;
+    height: auto;    
     margin: 5px;
     padding: 5px;
 }
@@ -191,7 +207,6 @@ span.psw {
     padding-top: 16px;
 }
 
-/* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -206,7 +221,6 @@ span.psw {
     padding-top: 60px;
 }
 
-/* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
     margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
@@ -214,7 +228,6 @@ span.psw {
     width: 90%; /* Could be more or less, depending on screen size */
 }
 
-/* The Close Button (x) */
 .close {
     position: absolute;
     right: 25px;
@@ -230,7 +243,6 @@ span.psw {
     cursor: pointer;
 }
 
-/* Add Zoom Animation */
 .animate {
     -webkit-animation: animatezoom 0.6s;
     animation: animatezoom 0.6s
@@ -246,7 +258,6 @@ span.psw {
     to {transform: scale(1)}
 }
 
-/* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
     span.psw {
         display: block;
@@ -256,4 +267,3 @@ span.psw {
         width: 100%;
     }
 }
-

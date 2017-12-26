@@ -7,15 +7,17 @@ function myfunction(e)
         console.log(myData);
 }
 
-function readServer()
+function readServer(name)
 {
-        readServerData("json.php");
+        readServerData("json.php?topic="+name);
         readServerData();
 }
 
 function readServerData(file)
 {
         var rawFile = new XMLHttpRequest();
+        rawFile.overrideMimeType("application/json");
+
         rawFile.open("GET", file, false);
         rawFile.onreadystatechange = function ()
         {
@@ -53,43 +55,55 @@ function reanderMyData(data)
 {
         var myData = JSON.parse(data);
         var html;
-        if(myData["result"] == "OK")
+        if(myData.result == "OK")
         {
-                console.log(myData);
-                for(var x in myData){
-                        console.log(x);
+                html = '<table class="table1">';
+                console.log('MY-DATA', myData);
+                var i = 0;
+                for(var x in myData.data){
+                        if(i == 0){
+                                row = myData.data[x];
+                                html = html + '<tr><td>';
+                                html = html + '<button class="book"><table><tr><td><img src="resorses/ava3.png" width="170" height="180" alt="submit" /></td><td><font size="5">' + row.Tytul + '</font><br><font size="3" color="red" ><i>' + row.Autor + '</i></font><br>' + row.RokWydania + '<br>' + row.Gatunek + '</td></tr></table></button></td>';
+                                console.log('DATA-LOOP',myData.data[x]);
+                                i =1;                      
+                        }
+                        else if(i == 1){
+                                row = myData.data[x];
+                                html = html + '<td>';
+                                html = html + '<button class="book"><table><tr><td><img src="resorses/ava3.png" width="170" height="180" alt="submit" /></td><td><font size="5">' + row.Tytul + '</font><br><font size="3" color="red" ><i>' + row.Autor + '</i></font><br>' + row.RokWydania + '<br>' + row.Gatunek + '</td></tr></table></button></td>';
+                                console.log('DATA-LOOP',myData.data[x]);
+                                i =0;                      
+                        }
                 }
-                html = "<button>aaa</button>";  //make html 
+                html = html+"</table>";//<button onclick="location='onebook.html'"></button>
                 document.getElementById("app").innerHTML = html;
         }
         else allert("error");
-                
 }
 
 $(document).ready(function(){
-                  // Activate Carousel
-                  $("#myCarousel").carousel();
-                  
-                  // Enable Carousel Indicators
-                  $(".item1").click(function(){
-                                    $("#myCarousel").carousel(0);
-                                    });
-                  $(".item2").click(function(){
-                                    $("#myCarousel").carousel(1);
-                                    });
-                  $(".item3").click(function(){
-                                    $("#myCarousel").carousel(2);
-                                    });
-                  $(".item4").click(function(){
-                                    $("#myCarousel").carousel(3);
-                                    });
-                  
-                  // Enable Carousel Controls
-                  $(".left").click(function(){
-                                   $("#myCarousel").carousel("prev");
-                                   });
-                  $(".right").click(function(){
-                                    $("#myCarousel").carousel("next");
-                                    });
-                  });
+
+        $("#myCarousel").carousel();
+
+        $(".item1").click(function(){
+                $("#myCarousel").carousel(0);
+        });
+        $(".item2").click(function(){
+                $("#myCarousel").carousel(1);
+        });
+        $(".item3").click(function(){
+                $("#myCarousel").carousel(2);
+        });
+        $(".item4").click(function(){
+                $("#myCarousel").carousel(3);
+        });
+
+        $(".left").click(function(){
+                $("#myCarousel").carousel("prev");
+        });
+        $(".right").click(function(){
+                $("#myCarousel").carousel("next");
+        });
+});
 

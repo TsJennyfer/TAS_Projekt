@@ -80,7 +80,6 @@
                                     
                                 </div>
                                 
-                                <!-- Left and right controls -->
                                 <a class="left carousel-control" href="#myCarousel" role="button">
                                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                                     <span class="sr-only">Previous</span>
@@ -107,7 +106,7 @@
                                         <br>
                                         <label><b>Password</b></label>
                                         <input type="password" placeholder="Enter Password" name="psw" required>
-                                        <button type="submit">Login</button><br>
+                                        <button class = "buttonLogin">Login</button><br>
                                         <input type="checkbox" checked="checked"> Remember me
                                     </div>
                                     
@@ -118,10 +117,7 @@
                         </div>
             
                         <script>
-                                // Get the modal
                                 var modal = document.getElementById('id01');
-                                
-                                // When the user clicks anywhere outside of the modal, close it
                                 window.onclick = function(event) {
                                     if (event.target == modal) {
                                         modal.style.display = "none";
@@ -130,66 +126,45 @@
                         </script>
                         <table>
                         <tr>
-                        <td>
+                        <td valign="top">
 	                        <table>
-                                    <tr colspan = "8">
-                                        <td>
-                                                 
-                                            <form>
-                                                <button class="bMenu" style="vertical-align:middle" onclick="readServer()"><span> Promocje </span></button>
-                                            </form>
+                                    <tr>
+                                        <td>                                                 
+                                                <button class="bMenu" style="vertical-align:middle" onclick="readServer('Sales')"><span> Promocje </span></button>
                                         </td>
                                                
                                     </tr>
                                     <tr>
                                         <td>
-                                            <form>
                                                 <button class="bMenu" style="vertical-align:middle"><span> Bestsellery </span></button>
-                                            </form>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <form>
                                                 <button class="bMenu" style="vertical-align:middle"> <span>Fantastyka </span></button>
-                                            </form>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <form>
                                                 <button class="bMenu" style="vertical-align:middle"> <span>Horror </span></button>
-                                            </form>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <form>
                                                 <button class="bMenu" style="vertical-align:middle"> <span>Historia </span></button>
-                                            </form>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <form>
                                                 <button class="bMenu" style="vertical-align:middle"> <span>Biografie </span></button>
-                                            </form>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                            <form>
                                                 <button class="bMenu" style="vertical-align:middle"> <span>E-booki </span></button>
-                                            </form>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>
-                                            <form>
-                                                <button class="bMenu" style="vertical-align:middle"> <span>Podręczniki i słowniki </span></button>
-                                            </form>
-                                        </td>
-                                    </tr>
+                                    
                                    <!-- <tr>
                                         <td>
                                             <form>
@@ -211,7 +186,7 @@
                         </table>
                 </td>
                 <td>
-                        <div class="container_for_list" style="background-color:#E0E0E0" id="app">
+                        <div class="container_for_list" id="app">
                         </div>
                 </td>
                 </tr>
