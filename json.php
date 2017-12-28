@@ -7,6 +7,11 @@
     $result = mysqli_query($connection, $sql) or die("Error in Selecting " . mysqli_error($connection));
     
     //fetch table rows from mysql db
+    
+    //TODO(KRISTIAN):
+    //dodaj argument NAME do selecta
+    //+picture.php dla obrazkow
+    
     $sql = "select * from ksiazki";
     
     $result = mysqli_query($connection, $sql) or die("Error in Selecting " . mysqli_error($connection));

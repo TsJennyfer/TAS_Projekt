@@ -1,16 +1,6 @@
-function myfunction(e)
-{
-        e.preventDefault();
-        var myText = document.getElementById("textbox").value;
-        document.getElementById('myDiv').innerHTML = myText;
-        var myData = JSON.parse(myText);
-        console.log(myData);
-}
-
-function readServer(name)
+function readServer(name)//add filter here
 {
         readServerData("json.php?topic="+name);
-        readServerData();
 }
 
 function readServerData(file)
@@ -32,58 +22,59 @@ function readServerData(file)
         }
         rawFile.send(null);
 }
-/*function readServerData(file)
-{
-        
-        var reader = new FileReader();
-        reader.onload = function(){
-            var text = reader.result;
-          // var node = document.getElementById('output');
-           // node.innerText = text;
-            console.log(text);
-        }
-        reader.readAsText(file);
- }
 
-function readServerData()
+var allData;
+
+function printBook(id)
 {
-    var data = '{"index1":"value1", "index2":[1,2,3]}';
-    
+        html = '<table>';
+
+        for(var x in allData.data){
+                row = allData.data[x];
+                if(row.ID == id){
+                        console.log('!!!find');
+                        html = html+'<tr><td valign="top"><img src="resorses/ava3.png" width="270" height="280" alt="submit"/></td><td><font size="15">' + row.Tytul + '</font><table><tr><td>Autor:</td><td><font size="5" color="red">' + row.Autor + '</font></td></tr><tr><td>Rok wydania:</td><td><font size="5" color="red">' + row.RokWydania + '</font></td></tr><tr><td>Gatunek:</td><td><font size="5">' + row.Gatunek + '</font></td></tr></table></td></tr><tr><td colspan="2"><font size="5">'+row.Opis+'</font></td></tr><tr><td><font size="5" color="red">Cena: </font><font size="7" color="red">??? <font></td><td><button class="bBasket">Do koszyka</button></td></tr></table>';
+                  }
+        }
+        document.getElementById("app").innerHTML = html;
 }
-*/
+
 function reanderMyData(data)
 {
         var myData = JSON.parse(data);
+        allData = myData;
         var html;
         if(myData.result == "OK")
         {
-                html = '<table class="table1">';
+                html = '<table>';
                 console.log('MY-DATA', myData);
                 var i = 0;
+                var num_image;
+
                 for(var x in myData.data){
                         if(i == 0){
                                 row = myData.data[x];
+
                                 html = html + '<tr><td>';
-                                html = html + '<button class="book"><table><tr><td><img src="resorses/ava3.png" width="170" height="180" alt="submit" /></td><td><font size="5">' + row.Tytul + '</font><br><font size="3" color="red" ><i>' + row.Autor + '</i></font><br>' + row.RokWydania + '<br>' + row.Gatunek + '</td></tr></table></button></td>';
-                                console.log('DATA-LOOP',myData.data[x]);
+                                html = html + '<button class="book" onclick="printBook('+row.ID+')" ><table><tr><td><img src="resorses/ava3.png" width="170" height="180" alt="submit" /></td><td><font size="5">' + row.Tytul + '</font><br><font size="3" color="red"><i>' + row.Autor + '</i></font><br>' + row.RokWydania + '<br>' + row.Gatunek + '</td></tr></table></button></td>';
+                                console.log('DATA-LOOP',myData.data[x]); //TODO(YEV): picture.php?name
                                 i =1;                      
                         }
                         else if(i == 1){
                                 row = myData.data[x];
                                 html = html + '<td>';
-                                html = html + '<button class="book"><table><tr><td><img src="resorses/ava3.png" width="170" height="180" alt="submit" /></td><td><font size="5">' + row.Tytul + '</font><br><font size="3" color="red" ><i>' + row.Autor + '</i></font><br>' + row.RokWydania + '<br>' + row.Gatunek + '</td></tr></table></button></td>';
+                                html = html + '<button class="book" onclick="printBook('+row.ID+')"><table><tr><td><img src="resorses/ava3.png" width="170" height="180" alt="submit" /></td><td><font size="5">' + row.Tytul + '</font><br><font size="3" color="red">' + row.Autor + '</font><br>' + row.RokWydania + '<br>' + row.Gatunek + '</td></tr></table></button></td>';
                                 console.log('DATA-LOOP',myData.data[x]);
                                 i =0;                      
                         }
                 }
-                html = html+"</table>";//<button onclick="location='onebook.html'"></button>
+                html = html+"</table>";
                 document.getElementById("app").innerHTML = html;
         }
         else allert("error");
 }
 
 $(document).ready(function(){
-
         $("#myCarousel").carousel();
 
         $(".item1").click(function(){
@@ -106,4 +97,3 @@ $(document).ready(function(){
                 $("#myCarousel").carousel("next");
         });
 });
-

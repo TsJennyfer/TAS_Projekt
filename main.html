@@ -11,7 +11,7 @@
                     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     
-    <body>
+    <body onload="readServer('Sales')">
         <script src="myapp.js"></script>
         <div class="bg">
                 <div class="container" style="background-color:#E0E0E0"> 
@@ -129,60 +129,42 @@
                         <td valign="top">
 	                        <table>
                                     <tr>
-                                        <td>                                                 
+                                        <td>  
+                                        <!--TODO(AGA): sales dodac do bazy, dodac tablece asocjacji z tymi filtrami-->                                               
                                                 <button class="bMenu" style="vertical-align:middle" onclick="readServer('Sales')"><span> Promocje </span></button>
                                         </td>
-                                               
                                     </tr>
                                     <tr>
                                         <td>
-                                                <button class="bMenu" style="vertical-align:middle"><span> Bestsellery </span></button>
+                                                <button class="bMenu" style="vertical-align:middle" onclick="readServer('BestSales')"><span> Bestsellery </span></button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                                <button class="bMenu" style="vertical-align:middle"> <span>Fantastyka </span></button>
+                                                <button class="bMenu" style="vertical-align:middle" onclick="readServer('Fantasy')"> <span>Fantastyka </span></button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                                <button class="bMenu" style="vertical-align:middle"> <span>Horror </span></button>
+                                                <button class="bMenu" style="vertical-align:middle" onclick="readServer('Horror')"> <span>Horror </span></button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                                <button class="bMenu" style="vertical-align:middle"> <span>Historia </span></button>
+                                                <button class="bMenu" style="vertical-align:middle" onclick="readServer('History')"> <span>Historia </span></button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                                <button class="bMenu" style="vertical-align:middle"> <span>Biografie </span></button>
+                                                <button class="bMenu" style="vertical-align:middle" onclick="readServer('Biography')"> <span>Biografie </span></button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
-                                                <button class="bMenu" style="vertical-align:middle"> <span>E-booki </span></button>
+                                                <button class="bMenu" style="vertical-align:middle" onclick="readServer('ebooks')"> <span>E-booki </span></button>
                                         </td>
                                     </tr>
                                     
-                                   <!-- <tr>
-                                        <td>
-                                            <form>
-                                                <input type="text" name="textbox" id="textbox" />
-                                                <input type="submit" name="button" id="button" onclick="myfunction(event)" />
-                                                <div id="myDiv"></div>
-                                            </form>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                                <button name="button" id="button" onclick="readServer()"> server </button>
-                                        </td>
-                                    </tr>
-
-                                <!--<form>
-                                        <button class="bBasket"> Do koszyka <img src="./sta/12.jpg" style="vertical-align: middle"></button>
-                                </form>-->
                         </table>
                 </td>
                 <td>

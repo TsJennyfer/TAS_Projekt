@@ -14,7 +14,6 @@ body {
     vertical-align: middle;
 }
 
-
 .bg { 
     background-image: url("resorses/back.jpg");
     width: 100%;
@@ -110,6 +109,11 @@ body {
         cursor: pointer;
         background-color:#f1f1f1;
 }  
+.book:hover {background-color: #E0E0E0}
+.book:active {
+    background-color: #E0E0E0;
+    transform: translateY(4px);
+}
 
 .bBasket {
     background: red;
@@ -120,7 +124,7 @@ body {
     padding: 15px 32px;
     width: 200px;
     cursor: pointer;
-        image: './sta/12.jpg' ;
+    image:url('resorses/basket.jpg') no-repeat;
     vertical-align: middle ;
 }
 .bBasket:hover {background-color: #cc0000}
@@ -149,7 +153,6 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
 }
 
-/* Set a style for all buttons */
 .buttonLogin {
     background-color: #4CAF50;
     color: white;
