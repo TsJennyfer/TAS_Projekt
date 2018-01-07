@@ -1,0 +1,51 @@
+<div layout="row" ng-controller="productsController" ng-cloak>
+    <div flex="10"></div>
+ 
+    <div flex="80" class='m-20px-0'>
+ 
+        <!-- page title & 'create product' button -->
+        <md-toolbar class="md-hue-2">
+            <div class="md-toolbar-tools">
+                <!-- page title -->
+                <div flex md-truncate>
+                    <h3 class="md-headline">Products</h3>
+                </div>
+ 
+                <!-- button for creating product -->
+			<md-button class="md-raised" ng-click="showCreateProductForm()">Create</md-button>
+            </div>
+        </md-toolbar>
+ 
+        <!-- 'search' bar will be here -->
+ 
+        <md-content flex>
+            <!-- show product record list -->
+            <md-list ng-init="readProducts()">
+                <md-list-item class="md-3-line" ng-repeat="product in products">
+ 
+                    <!-- product information -->
+                    <div class="md-list-item-text">
+                        <h3>{{product.tytul}}</h3>
+                        <h4>{{product.autor}}</h4>
+                        <h5>{{product.rokwydania}}</h5>
+						<h6>{{product.gatunek}}</h6>
+						<h7>{{product.opis}}</h7>
+						<h8>{{product.cena}}</h8>
+						<p>{{product.okladka}}</p>
+						<p>{{product.promocja}}</p>
+                    </div>
+ 
+                    <!-- 'read one', 'edit' and 'delete' buttons -->
+                    <div class="md-secondary-container">
+                        <md-button class="md-raised md-info" ng-click="readOneProduct(product.id)">Read One</md-button>
+                        <md-button class="md-raised md-primary" ng-click="showUpdateProductForm(product.id)">Edit</md-button>
+                        <md-button class="md-raised md-danger" ng-click="confirmDeleteProduct($event, product.id)">Delete</md-button>
+                    </div>
+                    <md-divider ng-if="!$last"></md-divider>
+                </md-list-item>
+            </md-list>
+        </md-content>
+    </div>
+ 
+    <div flex="10"></div>
+</div> <!-- end row -->
