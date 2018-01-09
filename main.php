@@ -1,0 +1,195 @@
+<?php
+session_start();
+
+?>
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>BOOKshelf</title>
+		<link rel="stylesheet" href="style.css">
+            <script src="http://code.jquery.com/jquery-latest.js"></script>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    
+    <body onload="readServer('Sales')">
+        <script src="myapp.js"></script>
+        <div class="bg">
+                <div class="container" style="background-color:#E0E0E0"> 
+                        <table width="100%">
+                                <tr>
+                                <td>
+                                    <button class="bMainPage" onclick="location='main.html'"> BOOKshelf </font>
+                                </td>
+                                <td >
+                                        <p align="right">
+                                                <font color="red"> 
+                                                        +48 85 674 36 19 (pon-pt: 8:00-18:00)  
+                                                        <br>      
+                                                        sklep@bookshelf.pl   
+                                                        <br>
+                                                        <a href="kontakt.html">KONTAKT</a>
+                                                </font>
+                                        </p>
+                                </td>
+                            </tr>
+                            <tr> 
+                                <td>                           
+                                        <p class="p1" > Twoja księgarnia internetowa </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p align="left">Witam, (if login() )</p>
+                                </td>  
+                                <td>
+                                        <p align="right">
+										<?php if((isset($_SESSION['zalogowany']))&&($_SESSION['zalogowany']==true)) : ?>
+                                                <button class="b1" onclick="location='logout.php'">
+												
+                                                                 <!--onclick="location='new.php'"--> Wyloguj się </button>
+										<?php else: ?>
+												<button class="b1" onclick="document.getElementById('id01').style.display='block'">
+												
+                                                                 <!--onclick="location='new.php'"--> Logowanie </button>
+																 <?php endif; ?>
+                                                <button class="b1" onclick="location='rejestracja.php'"> Stwórz konto </button>
+                                        </p>
+                                </td>      
+                            </tr>
+                        </table>
+                </div>
+                
+                <div class="container" style="background-color:#f1f1f1">
+                        <p align="center">
+                            <input type="text" name="textbox" id="textbox" size = 25 />
+                            <button class="bSearch" > 
+                                <img src="resorses/lupa.png" width="75" height="50" alt="submit" />
+                            </button>
+                        </p>
+                        <div class="container">
+                            <div id="myCarousel" class="carousel slide">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li class="item1 active"></li>
+                                    <li class="item2"></li>
+                                </ol>
+                                
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    
+                                    <div class="item active">
+                                        <img src="resorses/rsz_1.jpg"  width="460" height="345">
+                                    </div>
+                                    
+                                    <div class="item">
+                                        <img src="resorses/rsz_4.jpg" width="460" height="345">
+                                    </div>
+                                    
+                                </div>
+                                
+                                <a class="left carousel-control" href="#myCarousel" role="button">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" role="button">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div id="id01" class="modal">
+                
+                                <form class="modal-content animate" action="zaloguj.php" method="post">
+                                  <center>
+                                    <div class="imgcontainer">
+                                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                        <img src="resorses/man.jpg" alt="Avatar" class="avatar" >
+                                    </div>
+                                    
+                                    <div class="container">
+                                        <label><b>Username</b></label>
+                                        <input type="text" placeholder="Enter Username" name="login" required>
+                                        <br>
+                                        <label><b>Password</b></label>
+                                        <input type="password" placeholder="Enter Password" name="haslo" required>
+                                        <button class = "buttonLogin">Login</button><br>
+                                        <input type="checkbox" checked="checked"> Remember me
+                                    </div>
+                                    
+                                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                                </center>
+                               
+                              </form>
+                        </div>
+            
+                        <script>
+                                var modal = document.getElementById('id01');
+                                window.onclick = function(event) {
+                                    if (event.target == modal) {
+                                        modal.style.display = "none";
+                                    }
+                                }
+                        </script>
+                        <table>
+                        <tr>
+                        <td valign="top">
+	                        <table>
+                                    <tr>
+                                        <td>  
+                                        <!--TODO(AGA): sales dodac do bazy, dodac tablece asocjacji z tymi filtrami-->                                               
+                                                <button class="bMenu" style="vertical-align:middle" onclick="readServer('Sales')"><span> Promocje </span></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                                <button class="bMenu" style="vertical-align:middle" onclick="readServer('BestSales')"><span> Bestsellery </span></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                                <button class="bMenu" style="vertical-align:middle" onclick="readServer('Fantasy')"> <span>Fantastyka </span></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                                <button class="bMenu" style="vertical-align:middle" onclick="readServer('Horror')"> <span>Horror </span></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                                <button class="bMenu" style="vertical-align:middle" onclick="readServer('History')"> <span>Historia </span></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                                <button class="bMenu" style="vertical-align:middle" onclick="readServer('Biography')"> <span>Biografie </span></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                                <button class="bMenu" style="vertical-align:middle" onclick="readServer('ebooks')"> <span>E-booki </span></button>
+                                        </td>
+                                    </tr>
+                                    
+                        </table>
+                </td>
+                <td>
+                        <div class="container_for_list" id="app">
+                        </div>
+                </td>
+                </tr>
+                </table>
+                <!--   <button name="button" id="button" onclick="readServer()"> server </button> -->
+
+        </div>
+        <div class="container" style="background-color:#E0E0E0"> </div>
+</div>
+
+</body>
+</html>
