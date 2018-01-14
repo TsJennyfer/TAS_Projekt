@@ -5,7 +5,7 @@ class Database{
     private $host = "localhost";
     private $db_name = "api";
     private $username = "root";
-    private $password = "";
+    private $password = "root";
     public $conn;
  
     
