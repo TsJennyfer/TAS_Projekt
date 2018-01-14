@@ -23,7 +23,7 @@ session_start();
                         <table width="100%">
                                 <tr>
                                 <td>
-                                    <button class="bMainPage" onclick="location='main.html'"> BOOKshelf </font>
+                                    <button class="bMainPage" onclick="location='main.php'"> BOOKshelf </font>
                                 </td>
                                 <td >
                                         <p align="right">
@@ -67,8 +67,8 @@ session_start();
                 <div class="container" style="background-color:#f1f1f1">
                         <p align="center">
                             <input type="text" name="textbox" id="textbox" size = 25 />
-                            <button class="bSearch" > 
-                                <img src="resorses/lupa.png" width="75" height="50" alt="submit" />
+                            <button class="bSearch" > <!--onclick="readServer('Horror')"-->
+                                <img src="resorses/lupa.png" width="50" height="50" alt="submit" />
                             </button>
                         </p>
                         <div class="container">
@@ -109,7 +109,7 @@ session_start();
                                   <center>
                                     <div class="imgcontainer">
                                         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                                        <img src="resorses/man.jpg" alt="Avatar" class="avatar" >
+                                       <!-- <img src="resorses/man.jpg" alt="Avatar" class="avatar" >-->
                                     </div>
                                     
                                     <div class="container">

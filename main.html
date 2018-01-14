@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+?>
+
 <!doctype html>
 <html>
     <head>
@@ -43,8 +48,12 @@
                                 </td>  
                                 <td>
                                         <p align="right">
-                                                <button class="b1" onclick="document.getElementById('id01').style.display='block'"">
-                                                                 <!--onclick="location='new.php'"--> Logowanie </button>
+                                       <?php if((isset($_SESSION['zalogowany']))&&($_SESSION['zalogowany']==true)) : ?>
+                                                <button class="b1" onclick="location='logout.php'">
+												
+                                                                 <!--onclick="location='new.php'"--> Wyloguj się </button>
+										<?php else: ?>
+												<button class="b1" onclick="document.getElementById('id01').style.display='block'"> <!--onclick="location='new.php'"--> Logowanie </button>
                                                 <button class="b1" onclick="location='rejestracja.php'"> Stwórz konto </button>
                                         </p>
                                 </td>      
