@@ -6,7 +6,7 @@ session_start();
 
 if((!isset($_POST['login'])) || (!isset($_POST['haslo'])))
 {
-	header('Location: new.php');
+	header('Location: main.php');
 	exit();
 }
 
@@ -50,13 +50,13 @@ mysqli_real_escape_string($polaczenie,$login))))
 		else
 		{
 			$_SESSION['blad']='<span style="color:red">Nieprawidłowa nazwa użytkownika lub hasło!</span>';
-		header('Location: new.php');
+		header('Location: rejestracja.php');
 		}
 	}
 	else
 	{
 		$_SESSION['blad']='<span style="color:red">Nieprawidłowa nazwa użytkownika lub hasło!</span>';
-		header('Location: new.php');
+		header('Location: rejestracja.php');
 		
 	}
 }

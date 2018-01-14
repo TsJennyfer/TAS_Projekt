@@ -1,0 +1,65 @@
+<md-dialog>
+    <form ng-cloak>
+         
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Create Product</h2>
+            </div>
+        </md-toolbar>
+ 
+        <md-dialog-content>
+            <div class="md-dialog-content">
+ 
+                <!-- we are using ng-model to bind this view and the 'product model -->
+				
+				<md-input-container class="md-block">
+                    <label>Nazwa</label>
+                    <input ng-model="Tytul">
+                </md-input-container>
+ 
+                <md-input-container class="md-block">
+                    <label>Autor</label>
+                    <input ng-model="Autor">
+                </md-input-container>
+ 
+                <md-input-container class="md-block">
+                    <label>Rok Wydannia</label>
+                    <input ng-model="RokWydania">
+                </md-input-container>
+				
+				<md-input-container class="md-block">
+                    <label>Gatunek</label>
+                    <input ng-model="Gatunek">
+                </md-input-container>
+				
+				<md-input-container class="md-block">
+                    <label>Opis</label>
+                    <input ng-model="Opis">
+                </md-input-container>
+				
+				<md-input-container class="md-block">
+                    <label>Cena</label>
+                    <input ng-model="Cena">
+                </md-input-container>
+				
+				<md-input-container class="md-block">
+                    <label>Promocja</label>
+                    <input ng-model="Promocja">
+                </md-input-container>
+				
+				<md-input-container class="md-block">
+                    <label>Okladka</label>
+                    <input ng-model="Okladka">
+                </md-input-container>
+				
+				
+ 
+            </div>
+        </md-dialog-content>
+ 
+        <md-dialog-actions layout="row">
+            <md-button ng-click="cancel()">Cancel</md-button>
+            <md-button ng-click="createProduct()" class="md-primary">Create</md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

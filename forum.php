@@ -15,7 +15,7 @@ session_start();
 if($_SESSION['uprawnienia'] == 0)
 {
 	
-	header('Location: forumadm.php');
+	header('Location: paneladminstratoraindex.html');
 	
 }
 else 
@@ -28,7 +28,7 @@ else
 	//echo "<script type='text/javascript'>alert('$komunikat');</script>";
 	echo  '<span style="color:red">'.$komunikat.'</span>';
 	*/
-	header('Location: main.html');
+	header('Location: main.php');
 	
 }
  
