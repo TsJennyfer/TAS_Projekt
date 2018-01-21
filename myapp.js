@@ -33,7 +33,7 @@ function printBook(id)
                 row = allData.data[x];
                 if(row.ID == id){
                         console.log('!!!find');
-                        html = html+'<tr><td valign="top"><img src="' + row.Okadka + '" width="270" height="280" alt="submit"/></td><td><font size="15">' + row.Tytul + '</font><table><tr><td>Autor:</td><td><font size="5" color="red">' + row.Autor + '</font></td></tr><tr><td>Rok wydania:</td><td><font size="5" color="red">' + row.RokWydania + '</font></td></tr><tr><td>Gatunek:</td><td><font size="5">' + row.Gatunek + '</font></td></tr></table></td></tr><tr><td colspan="2"><font size="5">'+row.Opis+'</font></td></tr><tr><td><font size="5" color="red">Cena: </font><font size="7" color="red">'+row.Cena+' zł. </font></td><td><button class="bBasket">Do koszyka</button></td></tr></table>';
+                        html = html+'<tr><td valign="top"><img src="' + row.Okladka + '" width="230" height="350" alt="submit" /></td><td><font size="15">' + row.Tytul + '</font><table><tr><td>Autor:</td><td><font size="5" color="red">' + row.Autor + '</font></td></tr><tr><td>Rok wydania:</td><td><font size="5" color="red">' + row.RokWydania + '</font></td></tr><tr><td>Gatunek:</td><td><font size="5">' + row.Gatunek + '</font></td></tr></table></td></tr><tr><td colspan="2"><font size="5">'+row.Opis+'</font></td></tr><tr><td><font size="5" color="red">Cena: </font><font size="7" color="red">'+row.Cena+' zł. </font></td><td> <span style="float:right"><button class="bBasket"><img src="resorses/basket.png" width="80" height="80" alt="submit" /></button></span></td></tr></table>';
                   }
         }
         document.getElementById("app").innerHTML = html;
@@ -54,14 +54,14 @@ function reanderMyData(data)
                         if(i == 0){
                                 row = myData.data[x];
                                 html = html + '<tr><td>';
-                                html = html + '<button class="book" onclick="printBook('+row.ID+')" ><table><tr><td><img src="' + row.Okladka + '" width="150" height="180" alt="submit" /></td><td><font size="5">' + row.Tytul + '</font><br><font size="3" color="red"><i>' + row.Autor + '</i></font><br>' + row.RokWydania + '<br>' + row.Gatunek + '</td></tr></table></button></td>';
+                                html = html + '<button class="book" onclick="printBook('+row.ID+')" ><table><tr><td><img src="' + row.Okladka + '" width="130" height="180" alt="submit" /></td><td><font size="5">' + row.Tytul + '</font><br><font size="3" color="red"><i>' + row.Autor + '</i></font><br>' + row.RokWydania + '<br>' + row.Gatunek + '</td></tr></table></button></td>';
                                 console.log('DATA-LOOP',myData.data[x]);
                                 i =1;                     
                         }
                         else if(i == 1){
                                 row = myData.data[x];
                                 html = html + '<td>';
-                                html = html + '<button class="book" onclick="printBook('+row.ID+')"><table><tr><td><img src="' + row.Okladka + '" width="150" height="180" alt="submit" /></td><td><font size="5">' + row.Tytul + '</font><br><font size="3" color="red">' + row.Autor + '</font><br>' + row.RokWydania + '<br>' + row.Gatunek + '</td></tr></table></button></td>';
+                                html = html + '<button class="book" onclick="printBook('+row.ID+')"><table><tr><td><img src="' + row.Okladka + '" width="130" height="180" alt="submit" /></td><td><font size="5">' + row.Tytul + '</font><br><font size="3" color="red">' + row.Autor + '</font><br>' + row.RokWydania + '<br>' + row.Gatunek + '</td></tr></table></button></td>';
                                 console.log('DATA-LOOP',myData.data[x]);
                                 i =0;                      
                         }

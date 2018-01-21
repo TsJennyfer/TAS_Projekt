@@ -127,7 +127,7 @@ if(isset($_POST['email']))
                         <table width="100%">
                                 <tr>
                                 <td>
-                                    <button class="bMainPage" onclick="location='main.html'"> BOOKshelf </font><br><br>
+                                    <button class="bMainPage" onclick="location='main.php'"> BOOKshelf </font><br><br>
 
                                 </td>
                                 <td >
