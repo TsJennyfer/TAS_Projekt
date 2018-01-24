@@ -29,10 +29,11 @@ body {
     background: red;
     color: black;
     font-size: 15pt;
-    border: 10px;
+
     display: inline-block;
-    padding: 15px 32px;
+
     width: 200px;
+    height: 200px;
     cursor: pointer;
 }
 .b1:hover {background-color: #cc0000}

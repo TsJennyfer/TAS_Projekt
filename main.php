@@ -43,20 +43,38 @@ session_start();
                             </tr>
                             <tr>
                                 <td>
-                                    <p align="left">Witam, (if login() )</p>
+                                   <!-- <p align="left">Witam, (if login() )</p>-->
                                 </td>  
                                 <td>
                                         <p align="right">
-										<?php if((isset($_SESSION['zalogowany']))&&($_SESSION['zalogowany']==true)) : ?>
+						<?php if((isset($_SESSION['zalogowany']))&&($_SESSION['zalogowany']==true)) : ?>
                                                 <button class="b1" onclick="location='logout.php'">
 												
-                                                                 <!--onclick="location='new.php'"--> Wyloguj się </button>
-										<?php else: ?>
-												<button class="b1" onclick="document.getElementById('id01').style.display='block'">
+                                                <!--onclick="location='new.php'"--> Wyloguj się </button>
+						<?php else: ?>
+							<button class="b1" onclick="document.getElementById('id01').style.display='block'">
 												
-                                                                 <!--onclick="location='new.php'"--> Logowanie </button>
-																 <?php endif; ?>
+                                                         <!--onclick="location='new.php'"--> Logowanie </button>
+						 <?php endif; ?>
                                                 <button class="b1" onclick="location='rejestracja.php'"> Stwórz konto </button>
+                                               <!-- <button class="b1" onclick="location='koszyk.php'"> Koszyk </button>
+                                                        <img src="resorses/basket.png" width="35" height="35" alt="submit" />
+                                                        style="height:65px;width:65px"
+                                                </button>-->
+                                        </p>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td>
+                                        <p align="center">
+                                                <font color="red" size=20>
+                                                Witam, (if login() )
+                                                </font>
+                                        </p>
+                                </td>
+                                <td>
+                                        <p align="right">
+                                                <button class="bBasket" onclick="location='koszyk.php'" ><img src="resorses/basket.png" width="50" height="50" alt="submit" />
                                         </p>
                                 </td>      
                             </tr>
@@ -140,8 +158,7 @@ session_start();
                         <td valign="top">
 	                        <table>
                                     <tr>
-                                        <td>  
-                                        <!--TODO(AGA): sales dodac do bazy, dodac tablece asocjacji z tymi filtrami-->                                               
+                                        <td>                                                
                                                 <button class="bMenu" style="vertical-align:middle" onclick="readServer('Sales')"><span> Promocje </span></button>
                                         </td>
                                     </tr>
@@ -184,8 +201,6 @@ session_start();
                 </td>
                 </tr>
                 </table>
-                <!--   <button name="button" id="button" onclick="readServer()"> server </button> -->
-
         </div>
         <div class="container" style="background-color:#E0E0E0"> </div>
 </div>

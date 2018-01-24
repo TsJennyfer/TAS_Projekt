@@ -190,7 +190,9 @@ if(isset($_POST['email']))
 		                unset($_SESSION['e_passwd2']);
 	                }
 	                ?></br>
-	                <input type="submit" value="Zarejestruj" />
+	                <!-- <input type="submit" value="Zarejestruj" />-->
+	                <button class="b1" >Zarejestruj</button>
+												
 	                </form>
 	        </center>
         </div>
